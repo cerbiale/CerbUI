@@ -415,17 +415,17 @@ runService.Heartbeat:Connect(Update)
             tweentcon:Play()
             debounce = false
             toggled = true
-            pcall(Callback, toggled)    
-local toggleTween = TweenService:Create(Toggler_1, tweenInfo, {Position = UDim2.new(1, -13, 0.5, -6)})        
+            local toggleTween = TweenService:Create(Toggler_1, tweenInfo, {Position = UDim2.new(1, -13, 0.5, -6)})        
             toggleTween:Play()
+            pcall(Callback, toggled)    
         elseif toggled == true then
             debounce = true
             tweentcoff:Play()
             debounce = false
             toggled = false
-            pcall(Callback, toggled)      
-local toggleTween = TweenService:Create(Toggler_1, tweenInfo, {Position = UDim2.new(0, 0, 0.5, -6)})    
+            local toggleTween = TweenService:Create(Toggler_1, tweenInfo, {Position = UDim2.new(0, 0, 0.5, -6)})    
             toggleTween:Play()
+            pcall(Callback, toggled)      
         end
     end
 end)
